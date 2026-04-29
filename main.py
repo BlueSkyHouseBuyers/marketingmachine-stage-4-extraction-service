@@ -489,7 +489,7 @@ def download_images(
         filename = f"page_{page_num:03d}.png"
         storage_path = f"{images_path}{filename}"
         url = (
-            f"{SUPABASE_URL}/storage/v1/object/documents/{storage_path}"
+            f"{SUPABASE_URL}/storage/v1/object/{storage_path}"
         )
         resp = http.get(url, headers={
             "apikey": SUPABASE_SERVICE_KEY,
